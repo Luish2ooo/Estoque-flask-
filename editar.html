@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head><meta charset="UTF-8"><title>Editar Produto</title></head>
+<body>
+<h1>Editar Produto</h1>
+<form method="post">
+  Nome: <input type="text" name="nome" value="{{ produto['nome'] }}"><br>
+  Quantidade: <input type="number" name="quantidade" value="{{ produto['quantidade'] }}"><br>
+  Preço de Compra: <input type="number" name="preco_compra" value="{{ produto['preco_compra'] }}" step="0.01"><br>
+  Preço de Venda: <input type="number" name="preco_venda" value="{{ produto['preco_venda'] }}" step="0.01"><br>
+  <button type="submit">Atualizar</button>
+</form>
+<a href="/">Voltar</a>
+</body></html>

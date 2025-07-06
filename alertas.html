@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head><meta charset="UTF-8"><title>Alertas</title></head>
+<body>
+<h1>Produtos com Estoque Baixo</h1>
+<ul>
+{% for produto in produtos_baixo %}
+  <li>{{ produto['nome'] }} - {{ produto['quantidade'] }} unidades</li>
+{% endfor %}
+</ul>
+<a href="/">Voltar</a>
+</body></html>

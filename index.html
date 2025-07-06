@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head><meta charset="UTF-8"><title>Estoque</title></head>
+<body>
+<h1>Produtos em Estoque</h1>
+<a href="/adicionar">Adicionar Produto</a> | <a href="/alertas">Ver Alertas</a>
+<ul>
+{% for produto in produtos %}
+  <li>{{ produto['nome'] }} - {{ produto['quantidade'] }} und - R${{ produto['preco_venda'] }}
+    <a href="/editar/{{ produto['id'] }}">[Editar]</a>
+    <a href="/excluir/{{ produto['id'] }}">[Excluir]</a>
+  </li>
+{% endfor %}
+</ul>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul>{% for message in messages %}<li>{{ message }}</li>{% endfor %}</ul>
+  {% endif %}
+{% endwith %}
+</body></html>
